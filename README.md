@@ -1,4 +1,4 @@
-* Zombie Game
+# Zombie Game
 
 An as of yet unnamed game written in C++ using the SFML graphics library.
 

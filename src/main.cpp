@@ -1,5 +1,4 @@
 #include <iostream>
-#include <SFML/Window.hpp>
 #include "engine.h"
 
 int main(int argc, char** argv)
