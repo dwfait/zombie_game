@@ -8,3 +8,6 @@ bin/zombie_game: $(OBJ_FILES)
 
 obj/%.o: src/%.cpp
 	g++ $(CC_FLAGS) -c -o $@ $<
+
+clean:
+	rm -f obj/*.o bin/*

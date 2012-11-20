@@ -1,17 +1,12 @@
 #include <iostream>
 #include <SFML/Window.hpp>
+#include "engine.h"
 
 int main(int argc, char** argv)
 {
     // Create the main window
-    sf::Window App(sf::VideoMode(800, 600, 32), "SFML Window");
+  Engine engine;
+  engine.run();
 
-    // Start main loop
-    bool Running = true;
-    while (Running)
-    {
-        App.Display();
-    }
-
-    return EXIT_SUCCESS;
+  return 0;
 }
