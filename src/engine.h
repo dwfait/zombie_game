@@ -4,6 +4,7 @@
  **/
 
 #include "SFML/Window.hpp"
+#include "SFML/Graphics.hpp"
 
 #ifndef _ENGINE__H_
 #define _ENGINE__H_
@@ -16,9 +17,9 @@ class Engine
     void run();
 
   private:
-    bool init();
     void loop();
     void render();
+    void process_input();
 
     sf::Window* window;
 };

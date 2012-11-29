@@ -3,7 +3,7 @@
 //public methods:
 Engine::Engine()
 {
-  init();
+  window = new sf::Window(sf::VideoMode(800, 600, 32), "Zombie Game");
 }
 
 Engine::~Engine()
@@ -12,26 +12,32 @@ Engine::~Engine()
 
 void Engine::run()
 {
-  //Start main loop
+  loop();
 }
 
 
 //private methods:
-bool Engine::init()
-{
-  window = new sf::Window(sf::VideoMode(800, 600, 32), "Zombie Game");
-
-  if (!window)
-    return false;
-  return true;
-}
-
 void Engine::loop()
 {
-
+  while(window->IsOpened())
+  {
+    process_input();
+  }
 }
 
 void Engine::render()
 {
 
+}
+
+void Engine::process_input()
+{
+  sf::Event evt;
+  while(window->GetEvent(evt))
+  {
+    if (evt.Type == sf::Event::Closed)
+    {
+      window->Close();
+    }
+  }
 }
