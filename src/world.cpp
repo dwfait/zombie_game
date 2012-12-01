@@ -6,5 +6,10 @@ World::World(int size) : world_size(size)
   //large enough to store the world
   //A world will be made up of size*size tiles.
 
-  this->
+  this->generate_world();
+}
+
+void World::generate_world()
+{
+
 }

@@ -27,7 +27,7 @@ void Engine::loop()
 
 void Engine::render()
 {
-
+  window->Display();
 }
 
 void Engine::process_input()
