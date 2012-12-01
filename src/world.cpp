@@ -1,6 +1,6 @@
 #include "world.h"
 
-World::World(int size) : world_size(size)
+World::World(unsigned int size) : world_size(size), map(size)
 {
   //Generate the data structure and preallocate memory
   //large enough to store the world
