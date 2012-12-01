@@ -1,7 +1,7 @@
 CPP_FILES := $(wildcard src/*.cpp)
 OBJ_FILES := $(addprefix obj/,$(notdir $(CPP_FILES:.cpp=.o)))
 LD_FLAGS := -lsfml-system -lsfml-window -lsfml-graphics
-CC_FLAGS := -I/usr/include/nvidia-current
+CC_FLAGS := -Wall -Wextra -pedantic -std=c++11 -I/usr/include/nvidia-current
 
 bin/zombie_game: $(OBJ_FILES)
 	g++ -o $@ $^ $(LD_FLAGS)
