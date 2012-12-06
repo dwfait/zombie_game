@@ -5,6 +5,7 @@
 
 #include "SFML/Window.hpp"
 #include "SFML/Graphics.hpp"
+#include "world.h"
 
 #ifndef _ENGINE__H_
 #define _ENGINE__H_
@@ -22,5 +23,6 @@ class Engine
     void process_input();
 
     sf::Window* window;
+    World world;
 };
 #endif

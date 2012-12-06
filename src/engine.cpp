@@ -1,7 +1,7 @@
 #include "engine.h"
 
 //public methods:
-Engine::Engine()
+Engine::Engine() : world(100)
 {
   window = new sf::Window(sf::VideoMode(800, 600, 32), "Zombie Game");
 }

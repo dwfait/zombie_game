@@ -10,8 +10,6 @@ class World
     ~World();
     
   private:
-    void generate_world();
-
     int world_size;
     Map map;
 };
