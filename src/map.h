@@ -3,6 +3,7 @@
 
 #include "tile.h"
 #include <vector>
+#include <memory>
 
 class Map
 {
@@ -11,10 +12,11 @@ class Map
     ~Map();
 
     Tile& tile_at(unsigned int x, unsigned int y);
+    unsigned int get_size();
 
   private:
-    std::vector<std::vector<Tile*>> tiles;
+    std::vector<std::vector<Tile>> tiles;
+    unsigned int size;
 
-    void initialise();
 };
 #endif
