@@ -22,7 +22,7 @@ class Engine
     void render();
     void process_input();
 
-    sf::Window* window;
     World world;
+    sf::Window window;
 };
 #endif
