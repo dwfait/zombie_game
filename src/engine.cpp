@@ -1,9 +1,10 @@
 #include "engine.h"
 
 //public methods:
-Engine::Engine() : world(100)
+Engine::Engine() : 
+  world(100),
+  window{sf::VideoMode(800, 600, 32), "Zombie Game"}
 {
-  window = new sf::Window(sf::VideoMode(800, 600, 32), "Zombie Game");
 }
 
 Engine::~Engine()
@@ -19,7 +20,7 @@ void Engine::run()
 //private methods:
 void Engine::loop()
 {
-  while(window->IsOpened())
+  while(window.IsOpened())
   {
     process_input();
   }
@@ -27,17 +28,17 @@ void Engine::loop()
 
 void Engine::render()
 {
-  window->Display();
+  window.Display();
 }
 
 void Engine::process_input()
 {
   sf::Event evt;
-  while(window->GetEvent(evt))
+  while(window.GetEvent(evt))
   {
     if (evt.Type == sf::Event::Closed)
     {
-      window->Close();
+      window.Close();
     }
   }
 }
